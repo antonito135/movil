@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="barra"  mode="md">
+    <ion-title>Recuperar contraseña</ion-title>
+    <ion-button style="margin-right: 7px;" color="warning" slot="end" routerLink="/login"><ion-icon style="color: white;" name="log-in-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="fondo">
+  <ion-card class="carta_login">
+    <img src="../../../assets/img/Logo_DuocUC.svg.png" alt="" class="imagen_login" style="padding: 10px; margin-top: 5px;">
+    <ion-card-header  mode="md">
+      <ion-card-title></ion-card-title>
+    </ion-card-header>
+    <ion-card-content  mode="md">
+
+      <ion-item >
+        <ion-label position="stacked" style="color: white;">Usuario</ion-label>
+        <ion-input placeholder="Ingrese usuario" type="text" [(ngModel)]="user"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" style="color: white;">Email</ion-label>
+        <ion-input placeholder="Ingrese correo" type="correo" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <ion-button color="warning" (click)="login()" style="margin-top: 20px;">Restablecer</ion-button>
+      <p style="margin-bottom: 60px;">Se enviará un correo para restablecer.</p>
+      
+    </ion-card-content>
+    
+  </ion-card>
+  
+</div>
+
+</ion-content>
+

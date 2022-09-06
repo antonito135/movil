@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="barra"  mode="md">
+    <ion-title>Ingresar</ion-title>
+    <ion-button style="margin-right: 7px;" color="warning" slot="end" routerLink="/inicio"><ion-icon style="color: white;" name="home-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="fondo">
+  <ion-card class="carta_login">
+    <img src="../../../assets/img/Logo_DuocUC.svg.png" alt="" class="imagen_login" style="padding: 10px; margin-top: 5px;">
+    <ion-card-header  mode="md">
+      <ion-card-title>Ingresar Al Sistema</ion-card-title>
+    </ion-card-header>
+    <ion-card-content  mode="md">
+
+      <ion-item >
+        <ion-label position="stacked" style="color: white;">Usuario</ion-label>
+        <ion-input placeholder="Ingrese usuario" type="text" [(ngModel)]="user"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" style="color: white;">Contraseña</ion-label>
+        <ion-input placeholder="Ingrese contraseña" type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <ion-button color="warning" (click)="login()" style="margin-top: 20px;">INGRESAR</ion-button>
+      <br>
+      <a routerLink="/recuperar" style="color: gold;"> Restablecer contraseña</a>
+    </ion-card-content>
+    <p>¿No tienes cuenta?</p>
+    
+    <a routerLink="/registrar" style="margin-left: 10px; color: gold;">Registrar..</a>
+
+    <a style="color: gold;" routerLink="/docente">Docente</a> <a style="margin-bottom: 5px; color: gold;" routerLink="/alumno">Alumno</a>
+  </ion-card>
+  
+</div>
+
+</ion-content>
+

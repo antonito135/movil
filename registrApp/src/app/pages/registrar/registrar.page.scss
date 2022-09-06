@@ -1,0 +1,82 @@
+@use '../../../global.scss';
+
+.fondo {
+  height: 100vh;
+  background-image: url("../../..//assets/img/sede_san_carlos_apoquindo-1920x600.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+.imagen_login {
+  width: 40%;
+}
+
+ion-card {
+  --background: linear-gradient(#c5bcb4, #aba6a6);
+  margin: 0 auto;
+  top: 10vh;
+  height: 75vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  
+
+  ion-card-header {
+  ion-card-subtitle {
+      font-size: x-large;
+      color: global.$color-primario;
+  }
+
+  ion-card-title {
+      font-size: x-large;
+      color: global.$color-primario;
+  }
+}
+
+  ion-item {
+    --background: none;
+
+    ion-label {
+        font-size: large;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+  a {
+      text-decoration: none;
+      font-size: large;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+  }
+}
+
+@media (max-width: 400px) {
+  .fondo {
+      ion-card {
+          width: 80vw;
+      }
+      ion-label {
+            width: 80vh;
+      }
+      ion-item {
+        width: 44vh;
+      }
+      
+  }
+}
+
+@media(min-width: 1500px) {
+  ion-title{
+      font-size: 30px;
+  }
+  p{
+      font-size: 20px;
+  }
+  .posicion-boton{
+    margin-top: 30px;
+  }
+}

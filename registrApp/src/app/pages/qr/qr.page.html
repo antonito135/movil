@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar mode="md" color="barra">
+    <ion-title  style="color: white;" >Generar Qr</ion-title>
+    <ion-button style="margin-right: 7px;" color="warning" slot="end" routerLink="/docente"><ion-icon style="color: white;" name="log-in-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content mode="md">
+    <ion-slides (ionSlideDidChange)="ionSlideDidChange($event)" pager="false" [options]="slideOpts">
+      <ion-slide>
+        <ion-card class="carta_login">
+          <img src="../../../assets/img/Logo_DuocUC.svg.png" alt="" class="imagen_login" style="padding: 10px; margin-top: 5px;">
+              <ion-card-title>Profesor: Alan Gajardo</ion-card-title>
+              <ion-card-title>Asignatura: PRY3131</ion-card-title>
+              <ion-card-title>Seccion: 002D</ion-card-title>
+              <ion-button expand="block" (click)="setOpen(true)" color="warning" (click)="presentAlert()" style="margin-top: 20px;"> <ion-icon name="qr-code-outline"></ion-icon></ion-button>
+            <ion-modal [isOpen]="isModalOpen" >
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <ion-title>QR</ion-title>
+                    <ion-buttons slot="end">
+                      <ion-button (click)="setOpen(false)">Cerrar</ion-button>
+                    </ion-buttons>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <img src="../../../assets/img/QR-falsos-1.png" alt="">
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card class="carta_login">
+          <img src="../../../assets/img/Logo_DuocUC.svg.png" alt="" class="imagen_login" style="padding: 10px; margin-top: 5px;">
+              <ion-card-title>Profesor: Alan Gajardo</ion-card-title>
+              <ion-card-title>Asignatura: PRY3131</ion-card-title>
+              <ion-card-title>Seccion: 005D</ion-card-title>
+              <ion-button expand="block" (click)="setOpen(true)" color="warning" (click)="presentAlert()" style="margin-top: 20px;"> <ion-icon name="qr-code-outline"></ion-icon></ion-button>
+            <ion-modal [isOpen]="isModalOpen">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <ion-title>QR</ion-title>
+                    <ion-buttons slot="end">
+                      <ion-button (click)="setOpen(false)">Cerrar</ion-button>
+                    </ion-buttons>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <img src="../../../assets/img/QR-falsos-1.png" alt="">
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card class="carta_login">
+          <img src="../../../assets/img/Logo_DuocUC.svg.png" alt="" class="imagen_login" style="padding: 10px; margin-top: 5px;">
+              <ion-card-title>Profesor: Alan Gajardo</ion-card-title>
+              <ion-card-title>Asignatura: PRY3131</ion-card-title>
+              <ion-card-title>Seccion: 007D</ion-card-title>
+              <ion-button expand="block" (click)="setOpen(true)" color="warning" (click)="presentAlert()" style="margin-top: 20px;"> <ion-icon name="qr-code-outline"></ion-icon></ion-button>
+            <ion-modal [isOpen]="isModalOpen">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <ion-title>QR</ion-title>
+                    <ion-buttons slot="end">
+                      <ion-button (click)="setOpen(false)">Cerrar</ion-button>
+                    </ion-buttons>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <img src="../../../assets/img/QR-falsos-1.png" alt="">
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+        </ion-card>
+      </ion-slide>
+
+    </ion-slides>
+  </ion-content>

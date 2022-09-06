@@ -1,0 +1,49 @@
+.titulo__inicio{
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .imagen-duoc{
+        width:  2000px;
+        height: 50%;
+    }
+    .carta-informacion{
+     margin-left: 50px;
+     margin-right: 50px;
+     height: 25%;
+    }
+    p{
+        text-align: center;
+        font-size: 25px;
+        font-style: italic;
+    }
+    h1{
+        text-align: center;
+        font-size: 50px;
+    }
+    h2{
+        text-align: center;
+        font-size: 30px;
+        font-style: italic;
+    }
+    ion-title{
+        font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    ion-card{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+    }
+    .informacion{
+     text-align: center;   
+    }
+    ion-title{
+     font-size: larger;
+     text-align: start;
+    }
+    
+    }

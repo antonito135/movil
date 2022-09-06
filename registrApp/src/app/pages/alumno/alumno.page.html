@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="barra">
+    <ion-title>Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-list>
+      <ion-list-header> Cursos </ion-list-header>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Arquitectura</h2>
+          <h3>Profesora: Jeanette Leonelli</h3>
+          <ion-icon name="book-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Movil</h2>
+          <h3>Profesor: Alan Gajardo</h3>
+          <ion-icon name="book-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Ingles</h2>
+          <h3>Profesora: Patrizzia Ripetti </h3>
+          <ion-icon name="book-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" color="barra" >
+      <ion-tab-button  >
+        <ion-icon  name="camera-outline"></ion-icon>
+        <ion-label>Escanear QR</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/micuenta-alumno" >
+        <ion-icon  name="person-circle"></ion-icon>
+        <ion-label>Mi Cuenta</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/inicio" >
+        <ion-icon  name="exit-outline"></ion-icon>
+        <ion-label>Salir</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar color="barra">
+    <ion-title>Docente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-list>
+      <ion-list-header> Alumnos Seccion 005D</ion-list-header>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://elcordillerano1.cdn.net.ar/252/elcordillerano/images/01/08/77/1087779_0d47971571c924681e160d2bc860cdbb4b59f87d7a404223de629d8fcfc2e290/lg.webp" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Esteban Saez</h2>
+          <ion-icon name="checkmark-done-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://elcomercio.pe/resizer/GaJ4S0p2qgie2r0fbzkWon-sQAk=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/CFZDX56IFFH3JKPPK7FHX2MUSM.jpg" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Benjamin Lopez</h2>
+          <ion-icon name="checkmark-done-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Joven_de_Vicu%C3%B1a%2C_Chile%2C_vestido_de_huaso_para_las_celebraciones_conmemorativas_del_Combate_Naval_de_Iquique.jpg/220px-Joven_de_Vicu%C3%B1a%2C_Chile%2C_vestido_de_huaso_para_las_celebraciones_conmemorativas_del_Combate_Naval_de_Iquique.jpg" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Claudio Montecinos</h2>
+          <ion-icon name="close-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+
+  <ion-tabs color="barra">
+    <ion-tab-bar slot="bottom" color="barra">
+      <ion-tab-button routerLink="/qr" >
+        <ion-icon name="qr-code-outline"></ion-icon>
+        <ion-label>Generar QR</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/micuenta" >
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Mi Cuenta</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/inicio" >
+        <ion-icon name="exit-outline"></ion-icon>
+        <ion-label>Salir</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

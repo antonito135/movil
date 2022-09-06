@@ -1,0 +1,68 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar color="barra">
+    <ion-title style="margin-left: 20px;">
+      Administrar Usuarios
+    </ion-title> 
+    <ion-button color="warning" style="margin-right: 7px;" slot="end" routerLink="/login"><ion-icon style="color: white;" name="log-in-outline"></ion-icon></ion-button>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card style="padding: 5px;">
+  <form  [formGroup]="alumno" (ngSubmit)="registrar()">
+    <ion-item>
+      <ion-label  position="floating">Rut</ion-label>
+      <ion-input type="text" placeholder="Ingrese rut" formControlName="rut"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nombre completo</ion-label>
+      <ion-input type="text" placeholder="Ingrese nombre completo" formControlName="nom_completo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label style="margin-left: 20px;" position="floating">Email</ion-label>
+      <ion-input style="margin-left: 10px;" type="text" placeholder="Ingrese email" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fecha nacimiento</ion-label>
+      <ion-input type="date" placeholder="Ingrese fecha de nacimiento" formControlName="fecha_nac"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Semestre</ion-label>
+      <ion-input type="number" placeholder="Ingrese semestre" formControlName="semestre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        Seleccione
+      </ion-label>
+      <ion-select slot="end" formControlName="tipo">
+        <ion-select-option>Administrador</ion-select-option>
+        <ion-select-option>Docente</ion-select-option>
+        <ion-select-option>Alumno</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingrese contraseña" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Ingrese contraseña nuevamente</ion-label>
+      <ion-input type="password" placeholder="Ingrese contraseña nuevamente" formControlName="password" [(ngModel)]="verificar_password" [ngModelOptions]="{standalone: 'true'}"></ion-input>
+    </ion-item>
+    
+    <ion-button style="margin-left: 25px;  margin-top: 15px; margin-right: 10px;" type="submit" [disabled]="!alumno.valid">REGISTRAR</ion-button>
+    <ion-button style="margin-top: 15px;" class="boton" color="warning" (click)="actualizar()">ACTUALIZAR</ion-button>
+  </form>
+</ion-card>  
+  <h1 style="margin-top: 10px; margin-left: 25px;" class="tituloo" class="correr-titulo">LISTA DE USUARIOS</h1>
+  <ion-list *ngFor="let u of usuarios" >
+    <p *ngIf="u.tipo != 'Administrador'" style="margin-left: 5px; margin-right: 5px;" >Rut: {{u.rut}} Nombre: {{u.nom_completo}} Fecha: {{u.fecha_nac}} Tipo usuario: {{u.tipo}} </p>
+    <ion-button *ngIf="u.tipo != 'Administrador'" class="boton" color="warning" (click)="buscar(u.rut)" style="margin-left: 25px; margin-right: 10px;">Buscar</ion-button>
+    <ion-button *ngIf="u.tipo != 'Administrador'" class="boton" color="danger" (click)="eliminar(u.rut)">Eliminar</ion-button>
+  </ion-list>
+
+</ion-content>
+
+

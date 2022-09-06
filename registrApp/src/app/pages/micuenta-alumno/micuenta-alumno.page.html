@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar mode="md" color="barra">
+    <ion-title  style="color: white;" >Mi Cuenta</ion-title>
+    <ion-button style="margin-right: 7px;" color="warning" slot="end" routerLink="/alumno"><ion-icon style="color: white;" name="log-in-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-list>
+      <ion-list-header> </ion-list-header>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Benjamin Lopez</h2>
+          <h3>Correo : benja@duocuc.cl</h3>
+        </ion-label>
+      </ion-item>     
+    </ion-list>
+  </ion-card>
+
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" mode="md" color="barra">
+      <ion-tab-button >
+        <ion-icon name="camera-outline"></ion-icon>
+        <ion-label>Escanear QR</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/micuenta" >
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Mi Cuenta</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/inicio" >
+        <ion-icon name="exit-outline"></ion-icon>
+        <ion-label>Salir</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
+
